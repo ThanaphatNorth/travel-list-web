@@ -5,6 +5,7 @@ import HomeContainer from "../containers/HomeContainer";
 import { ROUTE_PATH } from "../util/constants";
 import NotFoundContainer from "../containers/NotFoundContainer";
 import MainLayout from "../layouts/MainLayout";
+import EatNSprintContainer from "../containers/EatNSplitContainer";
 
 const indexRoutes = [
   {
@@ -18,6 +19,10 @@ const indexRoutes = [
   {
     path: ROUTE_PATH.BILL_CALCUATION,
     element: <BillCalculationContainer />,
+  },
+  {
+    path: ROUTE_PATH.Eat_N_SPLIT,
+    element: <EatNSprintContainer />,
   },
 ];
 

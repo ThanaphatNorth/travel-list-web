@@ -1,34 +1,21 @@
 import React from "react";
 import menu from "./menu";
-const styles = {
-  nav: {
-    background: "#333",
-    padding: "10px 20px",
-  },
-  ul: {
-    listStyle: "none",
-    margin: 0,
-    padding: 0,
-    display: "flex",
-    gap: "20px",
-  },
-  li: {},
-  a: {
-    color: "white",
-    textDecoration: "none",
-    fontWeight: "bold",
-  },
-};
+import styles from "./Menu.module.scss";
+import { Link, useLocation } from "react-router-dom";
 
 const Menu = () => {
+  const location = useLocation();
   return (
-    <nav style={styles.nav}>
-      <ul style={styles.ul}>
+    <nav className={styles.nav}>
+      <ul>
         {menu.map((item) => (
-          <li key={item.id} style={styles.li}>
-            <a href={item.path} style={styles.a}>
+          <li key={item.id}>
+            <Link
+              to={item.path}
+              className={location.pathname === item.path ? styles.active : ""}
+            >
               {item.name}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

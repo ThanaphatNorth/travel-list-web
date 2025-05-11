@@ -1,0 +1,39 @@
+.nav {
+  background-color: #1e1e1e;
+  padding: 1.2rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  ul {
+    display: flex;
+    gap: 2.4rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.6rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #00bcd4;
+        }
+        &.active {
+          color: #00bcd4;
+          border-bottom: 2px solid #00bcd4;
+        }
+      }
+    }
+  }
+
+  // Optional: responsive for smaller screens
+  @media (max-width: 600px) {
+    ul {
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+  }
+}

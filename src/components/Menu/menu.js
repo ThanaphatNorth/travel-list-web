@@ -16,6 +16,11 @@ const menu = [
     name: "Bill Calculation",
     path: ROUTE_PATH.BILL_CALCUATION,
   },
+  {
+    id: 4,
+    name: "Eat N Split",
+    path: ROUTE_PATH.Eat_N_SPLIT,
+  },
 ];
 
 export default menu;
